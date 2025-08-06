@@ -1,0 +1,4 @@
+flask==3.0.3
+transformers==4.41.1
+torch  # version depends on your system/hardware
+pydantic==2.7.1

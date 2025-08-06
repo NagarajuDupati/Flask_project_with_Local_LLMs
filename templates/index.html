@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Assistant</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="header">
+        <h1>🤖 AI Assistant</h1>
+        <div class="header-controls">
+            <div class="model-selector">
+                <label for="model">Model:</label>
+                <select id="model" name="model">
+                    {% for k in models %}
+                        <option value="{{ k }}">{{ k.replace('-', ' ').title() }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="clear-chat-section">
+                <button id="clear-chat-btn" class="clear-chat-button" title="Clear all chat history">
+                    🗑️ Clear Chat History
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="chat-container">
+        <div class="chat-messages" id="chat-messages">
+            <!-- Chat messages will be displayed here -->
+        </div>
+        
+        <div class="typing-indicator" id="typing-indicator">
+            AI is thinking...
+        </div>
+
+        <div class="input-container">
+            <div class="input-wrapper">
+                <textarea 
+                    id="message-input" 
+                    class="message-input" 
+                    placeholder="Type your message here..."
+                    rows="1"
+                ></textarea>
+            </div>
+            <button id="send-button" class="send-button">
+                <span class="button-text">Send</span>
+                <div class="loading" id="loading">
+                    <div class="spinner"></div>
+                    <span>Processing...</span>
+                </div>
+            </button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
