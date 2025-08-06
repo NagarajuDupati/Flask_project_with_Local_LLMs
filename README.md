@@ -15,6 +15,8 @@ A modern web-based AI assistant that lets you chat with locally hosted Large Lan
 
 ---
 
+
+
 ## Application Flow
 See [`application_flow.md`](application_flow.md) for a detailed flow diagram and explanation.
 
