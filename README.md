@@ -111,7 +111,7 @@ first_flask/
 ---
 
 ## Credits
-- Built by [Your Name/Team]
+- Built by Nagaraju Dupati
 - Uses [Ollama](https://ollama.com/) for local LLM inference
 - UI inspired by modern chat apps
 
